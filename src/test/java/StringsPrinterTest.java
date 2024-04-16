@@ -44,11 +44,5 @@ public class StringsPrinterTest {
         StringsPrinter.createPdf(byteArrayOutputStream, inputList);
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         Assert.assertTrue(byteArray.length > 0);
-        File file = new File("C:/Users/annac/Documents/guitar/test1.pdf");
-        try (FileOutputStream outputStream = new FileOutputStream(file)) {
-            outputStream.write(byteArray);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
